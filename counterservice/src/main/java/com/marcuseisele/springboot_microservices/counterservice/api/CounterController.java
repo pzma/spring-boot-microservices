@@ -17,6 +17,9 @@ public class CounterController {
     @Value(value = "${counter.prefixMessage}")
     private String prefixMessage;
 
+    @Value(value = "help")
+    private String helpMe;
+
     @GetMapping(path = "/count")
     public String getCount(){
         return prefixMessage + count.getAndIncrement();
